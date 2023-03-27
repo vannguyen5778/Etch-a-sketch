@@ -1,0 +1,171 @@
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'VT323', monospace;
+  }
+  
+  body {
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=154143), auto;
+  }
+  
+  /* Background */
+  .crossfade{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header {
+      text-transform: uppercase;
+      position: absolute;
+      top: 10px;
+  }
+  
+  .crossfade > figure {
+    animation: imageAnimation 45s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .crossfade > figure:nth-child(1) { background-image: url("https://wallpaperaccess.com/full/1547801.jpg"); }
+  .crossfade > figure:nth-child(2) {
+    animation-delay: 9s;
+    background-image: url("https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/7416/7416-1609352705-452242754.png");
+  }
+  .crossfade > figure:nth-child(3) {
+    animation-delay: 18s;
+    background-image: url("https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/7416/7416-1609352705-853839590.png");
+  }
+  .crossfade > figure:nth-child(4) {
+    animation-delay: 27s;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/100/279/758/stardew-valley-moon-landscape-pixel-art-hd-wallpaper-preview.jpg");
+  }
+  .crossfade > figure:nth-child(5) {
+    animation-delay: 36s;
+    background-image: url("https://external-preview.redd.it/hijDxtIyNy_wI_O2MIzCiWPMbC0nxHOTrqbS2LTVI3c.jpg?auto=webp&s=54a4af9df6db6df0a77d47f6f140bef2c3bc32d7");
+  }
+  
+  @keyframes 
+  imageAnimation { 
+    0% {
+      opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+  }
+  
+  .grid-item {
+    border: .5px solid #000;
+    background-color: #fff;
+    /* display: grid; */
+  }
+  
+  /* Drawing board */
+  .container{
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  
+    
+  }
+  
+  .frame{
+    background-color: #e00b0b;
+    min-height: 500px;
+    min-width: 500px;
+    border: 4px solid #000;
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px #5a0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .drawing-board{
+    background-color: #f4f0e8;
+    min-width: 380px;
+    height: 380px;
+    border: 4px solid #000;
+    border-radius: 8px;
+    box-shadow:  -0.8em -0.8em 2em #b37572;
+    display: grid;  
+    margin-top: 50px;         
+  }
+  
+.settings{
+    padding: 10px 10px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+  
+  .circle{
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 3.5px 7.0px 7.0px hsl(0deg 0% 0% / 0.39);
+  }
+  
+  .circle p{
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+  }
+  
+ 
+  .size-value {
+    color:#fff;
+  }
+ 
+  input[type='color'] {
+    width: 40px;
+    height: 16px;
+    border: none;
+  }
+  
+  input[type='range']{
+    background: #ff0000;
+    width: 100%;
+  }
+
+  button{
+    height: 20px;
+    width: 50px;
+    overflow: hidden;
+  }
+  
+  .size-box{
+    display: block;
+    transform: translateY(-25%);
+    max-width: 60px;
+  }
+  
+  .size-value {
+    transform: translateX(7.5%);
+  }
